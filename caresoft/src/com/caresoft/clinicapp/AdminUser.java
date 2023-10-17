@@ -78,7 +78,7 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public void setSecurityIncidents(String notes) {
-		this.securityIncidents.add(notes);
+	public void setSecurityIncidents(ArrayList<String> securityIncidents) {
+		this.securityIncidents = securityIncidents;
 	}
 }

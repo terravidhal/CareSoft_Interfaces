@@ -21,7 +21,7 @@ public class Physician extends User implements HIPAACompliantUser {
     // TO DO: Implement HIPAACompliantUser!
 	    // method 1
 	    public boolean assignPin(int pin) {  
-	    	if(pin < 1000 || pin > 9999) {  // Pin must be exactly 4 digits
+	    	if(pin < 1e3 || pin > 9999) {  // Pin must be exactly 4 digits (1e3 => 1000(4 digits))
 	    		return false;
 	    	}
 	    	else {
@@ -52,7 +52,7 @@ public class Physician extends User implements HIPAACompliantUser {
 	public ArrayList<String> getPatientNotes() {
 		return this.patientNotes;
 	}
-	public void setPatientNotes(String notes) {
-		this.patientNotes.add(notes);
+	public void setPatientNotes(ArrayList<String> patientNotes) {
+		this.patientNotes = patientNotes;
 	}
 }
